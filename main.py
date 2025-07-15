@@ -58,4 +58,4 @@ async def on_command_error(ctx, error):
         await ctx.send(f"An error occurred: {error}")
 
 # Run the bot with token from Replit Secrets
-bot.run(os.environ['BOT_TOKEN'])
+bot.run(os.environ['YOUR_BOT_TOKEN'])
