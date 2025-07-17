@@ -14,6 +14,9 @@ bot = commands.Bot(command_prefix="-", intents=intents)
 @bot.event
 async def on_ready():
     print(f"✅ Logged in as {bot.user} (ID: {bot.user.id})")
+    # Set custom status: Listening to -muteall & -unmuteall
+    activity = discord.Activity(type=discord.ActivityType.listening, name="-muteall & -unmuteall")
+    await bot.change_presence(activity=activity)
 
 @bot.command(aliases=["mute"])
 @commands.has_permissions(mute_members=True)
